@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio</title>
   <link rel="stylesheet" href="/style.css">
-  <link rel="icon" href="/assets/icon.png">
+  <link rel="icon" href="./assets/icon.png">
   <style>
     /* Layout: make body/site-wrap full-height so footer can sit at bottom */
     html, body { height:100%; }
@@ -71,7 +71,7 @@
     <div class="header">
       <div class="header-inner">
         <div class="brand">
-          <div class="logo"><img src="/assets/logo_light.png" alt="logo"></div>
+          <div class="logo"><img src="./assets/logo_light.png" alt="logo"></div>
           <div class="title">
             <h1>Portfolio</h1>
             <div class="subtitle">My video projects & demos</div>
@@ -123,7 +123,7 @@
     <footer class="site-footer" role="contentinfo">
       <div class="footer-inner">
         <div style="display:flex;align-items:center;gap:12px">
-          <div class="footer-brand"><img src="/assets/icon.png" alt="icon"></div>
+          <div class="footer-brand"><img src="./assets/icon.png" alt="icon"></div>
           <div class="footer-info">
             <div><a href="mailto:hyogeun3466@naver.com">hyogeun3466@naver.com</a></div>
             <div>Discord: @daru129</div>
@@ -143,7 +143,7 @@
   <div id="contact-modal" class="contact-modal" aria-hidden="true">
       <div class="contact-card" role="dialog" aria-labelledby="contact-title">
       <button class="contact-close" aria-label="Close">✕</button>
-      <div class="contact-logo"><img src="/assets/logo.png" alt="logo"></div>
+      <div class="contact-logo"><img src="./assets/logo.png" alt="logo"></div>
       <h3 id="contact-title">Contact</h3>
       <div class="contact-field">
         <div class="contact-left">
@@ -330,7 +330,7 @@
           const prof = channelProfiles[key] || channelProfiles[grp.name] || null;
           if(prof){
             const img = document.createElement('img'); img.className = 'head-avatar'; img.alt = prof.uploader_name || prof.uploader_id || '';
-            img.src = prof.avatar || prof.uploader_avatar || '/assets/logo_light.png';
+            img.src = prof.avatar || prof.uploader_avatar || './assets/logo_light.png';
             left.appendChild(img);
           }
           left.appendChild(h);
@@ -559,7 +559,7 @@
           const card = document.createElement('article'); card.className='channel-card';
           const avatarWrap = document.createElement('div'); avatarWrap.className='channel-avatar';
           const img = document.createElement('img'); img.alt = p.uploader_name || p.uploader_id || 'channel';
-          img.src = p.avatar || '/assets/logo_light.png';
+          img.src = p.avatar || './assets/logo_light.png';
           avatarWrap.appendChild(img);
           const name = document.createElement('div'); name.className='channel-name'; name.textContent = p.uploader_name || p.uploader_id || 'Unknown';
           const desc = document.createElement('div'); desc.className='channel-desc'; desc.textContent = p.description || '';
@@ -677,7 +677,7 @@
       }
       const prev = slider.querySelector('.hero-prev');
       const next = slider.querySelector('.hero-next');
-      const basePath = './assets/banner/';
+      const basePath = '../assets/banner/';
       const PROGRESS_EASE = 'cubic-bezier(0.4,0,0.2,1)';
       // Force JS animations for captions to avoid OS/browser reduced-motion suppressing CSS keyframes
       const FORCE_JS_CAPTION_ANIM = true;
